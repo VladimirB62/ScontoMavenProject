@@ -1,5 +1,7 @@
 package com.telran.sconto.pages;
 
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
 import com.telran.sconto.utils.PropertiesLoader;
 import org.openqa.selenium.By;
 
@@ -15,11 +17,19 @@ public class HomePage {
         $(acceptButton).click();
     }
 
-    public void clickOnLoginButton() {
+    public void clickOnLoginIcon() {
         $(loginIconLocator).click();
+    }
+
+    private static By myAccountIconLocator = By.cssSelector(".headerElement__status--login");
+
+    public SelenideElement myAccountIconDisplayed() {
+        return $(myAccountIconLocator);
     }
 
     public void clickOnMyAccountIcon() {
         $(myAccountIconLocator).click();
     }
+
+
 }

@@ -27,8 +27,8 @@ Feature: Sconto Login
       Then Email Error message displayed
       Examples:
         |email               |password |
-        |bespalov10v@gmailcom|123456Aa!|
-        |bespalov10vgmail.com|123456Aa!|
-        |bespalov10v@gmail.  |123456Aa!|
-        |bespalov10v@.com    |123456Aa!|
+        |hiddinkGus@.com    |123456Aa!|
+        |hiddinkGus@gmail.  |123456Aa!|
+        |hiddinkGusgmail.com|123456Aa!|
+        |hiddinkGus@gmailcom|123456Aa!|
 

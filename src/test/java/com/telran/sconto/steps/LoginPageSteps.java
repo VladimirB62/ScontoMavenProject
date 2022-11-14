@@ -27,7 +27,7 @@ public class LoginPageSteps implements En {
         });
 
         And("Click Anmelden button",() ->{
-            login.clickOnLoginIcon();
+            login.clickOnLoginButton();
         });
 
         When("Enter the wrong email and a valid password",(DataTable table) ->{
@@ -40,7 +40,7 @@ public class LoginPageSteps implements En {
         });
 
         Then("Email Error message displayed",() ->{
-            login.emailErrorDisplayed().shouldHave(text("geben Sie"));
+            login.emailErrorDisplayed().shouldHave(text("Bitte geben Sie eine gültige E-Mail-Adresse ein"));
         });
     }
 }

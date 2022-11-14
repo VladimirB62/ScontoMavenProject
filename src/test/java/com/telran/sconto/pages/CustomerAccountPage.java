@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CustomerAccountPage {
 
-    private static By accountTitleLocator = By.cssSelector(".titleHeadLine");
+    private static By accountTitleLocator = By.cssSelector(".titleHeadline");
 
 
     public SelenideElement accountTitleDisplayed() {

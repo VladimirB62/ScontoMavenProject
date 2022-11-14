@@ -27,8 +27,8 @@ public class LoginPage {
         $(passwordInputLocator).setValue(validPassword);
     }
 
-    public void clickOnLoginIcon() {
-        @(loginButtonLocator).click();
+    public void clickOnLoginButton() {
+        $(loginButtonLocator).click();
     }
 
     public void wrongEmailInput(String email, String password) {
@@ -36,7 +36,7 @@ public class LoginPage {
         $(passwordInputLocator).setValue(password);
     }
 
-    private static By wrongEmailMessageLocator = By.id("loginEmail-error")
+    private static By wrongEmailMessageLocator = By.id("loginEmail-error");
 
     public <T> SelenideElement emailErrorDisplayed() {
         return $(wrongEmailMessageLocator);

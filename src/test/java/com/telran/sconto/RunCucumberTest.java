@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(plugin = {"json:target/cucumber-report.json", "pretty"},
-        features = "src/test/resources/features")
+        features = "src/test/resources/features",
+        tags = "@invalidEmail")
 
 public class RunCucumberTest {
 }
