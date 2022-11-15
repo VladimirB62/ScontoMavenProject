@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(plugin = {"json:target/cucumber-report.json", "pretty"},
         features = "src/test/resources/features",
-        tags = "@invalidEmail")
+        tags = "@emptyPassword")
 
 public class RunCucumberTest {
 }

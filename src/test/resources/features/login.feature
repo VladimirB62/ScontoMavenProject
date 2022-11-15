@@ -32,3 +32,12 @@ Feature: Sconto Login
         |hiddinkGusgmail.com|123456Aa!|
         |hiddinkGus@gmailcom|123456Aa!|
 
+      @emptyPassword
+      Scenario: Login with a wrong email
+        Given Navigate to Home page
+        When Click on Anmelden icon
+        Then Login Page displayed
+
+        When Enter the valid email and empty password
+        And Click Anmelden button
+        Then Demands for valid password message appeared

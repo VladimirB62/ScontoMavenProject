@@ -42,5 +42,15 @@ public class LoginPageSteps implements En {
         Then("Email Error message displayed",() ->{
             login.emailErrorDisplayed().shouldHave(text("Bitte geben Sie eine gültige E-Mail-Adresse ein"));
         });
+
+        When("Enter the valid email and empty password",() ->{
+            login.withEmptyPasswordFieldLogin();
+        });
+
+        Then("Demands for valid password message appeared",() ->{
+            login.validPasswordDemandAppeared().shouldHave(text("Bitte verwenden Sie ein Passwort von mindestes 8 " +
+                    "Zeichen mit mindestens einem Kleinbuchstaben, einem Großbuchstaben," +
+                    " einer Zahl und einem Sonderzeichen."));
+        });
     }
 }

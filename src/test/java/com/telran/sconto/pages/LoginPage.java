@@ -41,4 +41,15 @@ public class LoginPage {
     public <T> SelenideElement emailErrorDisplayed() {
         return $(wrongEmailMessageLocator);
     }
+
+    public void withEmptyPasswordFieldLogin() {
+        $(emailInputLocator).setValue(validEmail);
+        $(passwordInputLocator).setValue("");
+    }
+
+    private static By loginPasswordErrorLocator = By.id("loginPassword-error");
+
+    public SelenideElement validPasswordDemandAppeared() {
+        return $(loginPasswordErrorLocator);
+    }
 }
